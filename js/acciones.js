@@ -7,18 +7,18 @@ $(document).ready(function(e){
 
 function onDeviceReady(){
 	
-	$('#posicion').on ('click', function(){
+	$('#posicion').on('click', function(){
 		getPosition ();
 	});//posicion
 }//onDeviceReady
 
 function getPosition(){
-	var options = {
-		enableHighAccuracy :true,
+	var options= {
+		enableHighAccuracy :true, 
 		maximumAge: 3600000
 	}//options
 	
-	var watchID = navigator.geolocation.getCurrentPosition (onSuccess, onError, options);
+	var watchID= navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
 	
 	function onSuccess(position) {
 		
